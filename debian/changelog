@@ -1,0 +1,217 @@
+coinor-osi (0.108.6+repack1-2) unstable; urgency=low
+
+  * QA upload.
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + coinor-libosi1v5: Add Multi-Arch: same.
+    + coinor-libosi-dev: Add Multi-Arch: same.
+    + coinor-libosi-doc: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Thu, 04 Feb 2021 02:14:28 +0000
+
+coinor-osi (0.108.6+repack1-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream version 0.108.6+repack1
+  * Update Standards-Version to 4.5.0
+  * Update required version for build-dependencies.
+  * Changes to include BuildTools in source, so we can make use of
+    autoreconf during build.
+    - Change URI in d/watch
+    - Add folders to Files-Excluded in d/copyright
+    - Remove without autoreconf and add override_dh_autoreconf in d/rules
+    - Change path in d/coinor-libosi-doc.examples
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-Browse
+    Update: Bug-Submit.
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Mon, 10 Feb 2020 10:51:33 +0100
+
+coinor-osi (0.108.5+repack1-1) unstable; urgency=medium
+
+  * QA upload
+  [ Debian Janitor ]
+  * Drop use of autotools-dev debhelper.
+  * Update standards version to 4.4.1, no changes needed.
+  * Set upstream metadata fields: Bug-Submit.
+
+  [ Håvard Flaget Aasen ]
+  * New upstream version 0.108.5+repack1
+  * Update version of dependency coinor-libcoinutils-dev
+  * Change from debian/compat to debhelper-compat
+  * Remove obsolete dependency, autotools-dev
+  * In debian/watch
+    - Add 'repack' in dversionmangle
+    - Change to secure URI's
+  * Update debian/coinor-libosi-dev.install
+    - Shorten paths
+    - Remove usr/share/coin
+  * Add debian/coinor-libosi-doc.links
+  * Use the source created jquery.js file
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Sat, 21 Dec 2019 09:55:28 +0100
+
+coinor-osi (0.107.9+repack1-2) unstable; urgency=medium
+
+  * QA upload
+
+  [ Jelmer Vernooĳ ]
+  * Change priority extra to priority optional.
+  * Trim trailing whitespace.
+
+  [ Anton Gladky ]
+  * [514b21d] Set Standards-Version: 4.3.0. Update VCS-fields.
+  * [e3136ff] Orphan the package
+  * [7581206] Add dependency on autotools-dev
+
+ -- Anton Gladky <gladk@debian.org>  Wed, 07 Aug 2019 20:26:13 +0200
+
+coinor-osi (0.107.9+repack1-1) unstable; urgency=medium
+
+  * Upload into unstable.
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 21 Aug 2017 21:25:56 +0200
+
+coinor-osi (0.107.9+repack1-1~exp1) experimental; urgency=medium
+
+  * [f698d92] New upstream version 0.107.9+repack1
+  * [18089a9] Remove autotools from build-depends.
+  * [583e913] Set Standards-Version: 4.0.0
+  * [624406e] Update version of dependend coinor-libcoinutils-dev
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 19 Aug 2017 23:50:32 +0200
+
+coinor-osi (0.107.8+repack1-1~exp1) experimental; urgency=medium
+
+  * [a31a3cc] Update d/watch
+  * [0de8ecf] Remove MSVisualStudio from the package.
+  * [a42d329] New upstream version 0.107.8+repack1
+  * [e35ed98] Remove patch, applied by upstream.
+  * [e436a98] Add myself as uploader.
+  * [1b2e5d4] Remove Miles Lubin from uploaders. (Closes: #862819)
+  * [8c478d6] Remove dbg-package.
+  * [2b96336] Use compat level 10.
+  * [76a9ed8] Apply cme fix dpkg.
+  * [ba35c92] Apply maximal hardening.
+  * [b9fd2f1] Add --without autoreconf to dh-options.
+  * [50a2af0] Fix typo in changelog.
+  * [f15ce99] Fix package name in override.
+  * [57dfe60] Update minimal coinutils version in dependencies.
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 03 Jun 2017 21:29:19 +0200
+
+coinor-osi (0.106.9-2) unstable; urgency=medium
+
+  * libstdc++6 transition: rename coinor-libosi1 to coinor-libosi1v5
+    and coinor-libosi1-dbg to coinor-libosi1v5-dbg (closes: #796715)
+  * bump coinor-libcoinutils-dev build-dep
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 25 Aug 2015 12:51:04 +0200
+
+coinor-osi (0.106.9-1) unstable; urgency=low
+
+  * New upstream version.
+  * Use dh_autotools-dev to update config.{sub,guess} for new ports.
+    - Thanks to Adam Conrad
+  * Remove shlibdeps patch incorporated upstream with configure option
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Tue, 02 Sep 2014 21:22:25 -0400
+
+coinor-osi (0.106.4-1) unstable; urgency=low
+
+  * New upstream version.
+  * Switch to upstream's packager-friendly tarballs.
+  * Bump standards version (no changes needed).
+  * Upload to unstable for transition.
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Wed, 27 Nov 2013 23:33:22 -0500
+
+coinor-osi (0.106.1-2) experimental; urgency=low
+
+  * Update package descriptions from upstream.
+  * Add missing dependency on libjs-jquery.
+    - Thanks to Paul Richards Tagliamonte.
+  * Remove .la files.
+  * Update copyright file.
+    - Previous maintainer refused to relicense under EPL.
+  * Patch libOsi to properly set shared library dependencies.
+    - libOsiCommonTests still has missing symbols, but
+      is not user facing.
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Mon, 30 Sep 2013 00:03:26 -0400
+
+coinor-osi (0.106.1-1) experimental; urgency=low
+
+  * New upstream version (Closes: #687261)
+    - License changed to EPL.
+    - SONAME version is now 1.
+  * New maintainer (Closes: #645085)
+  * Rewrite rules using dh.
+  * Bump to compat 9 (libraries now installed to multiarch dirs.).
+  * Bump standards version.
+    - Updated copyright file to machine-readable format.
+  * No longer depends on clp, coinor-vol, coinor-dylp.
+    - Following upstream reorganization, these packages now
+      depend on OSI and provide their own interfaces.
+  * Remove outdated patches.
+  * Add patch to fix building with pkg-config.
+
+ -- Miles Lubin <miles.lubin@gmail.com>  Fri, 06 Sep 2013 00:02:20 -0400
+
+coinor-osi (0.103.0-1) unstable; urgency=low
+
+  * New upstream version.
+    - Bump Standards-Version (no changes needed).
+    - Build depend on clp >= 1.12.0 and dylp >= 1.6.0.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Sat, 10 Jul 2010 09:10:08 +0200
+
+coinor-osi (0.102.3-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Mon, 17 May 2010 18:13:20 +0200
+
+coinor-osi (0.102.2-1) unstable; urgency=low
+
+  * New upstream version.
+    - Switch to dpkg-source 3.0 (quilt) format.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Sun, 11 Apr 2010 09:17:11 +0200
+
+coinor-osi (0.102.1-1) unstable; urgency=low
+
+  * New upstream version (Closes: #571392)
+  * Bump Standards-Version (no changes needed).
+  * Build depend on coinor-libcoinutils-dev >= 2.6.0-2, clp >= 1.11.0
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Fri, 26 Feb 2010 17:25:38 +0100
+
+coinor-osi (0.100.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Refresh patches.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Wed, 14 Oct 2009 07:33:03 +0200
+
+coinor-osi (0.100.1-1) unstable; urgency=low
+
+  [ Soeren Sonnenburg ]
+  * New upstream version.
+  * Refresh patches.
+  * Fix override disparity by moving coinor-libosi0-dbg into section debug
+  libdevel
+
+  [ Aramian Wasielak ]
+  * debian/control:
+    - Bump Standards-Version (no changes needed).
+  * debian/copyright:
+    - Small formatting changes.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Thu, 24 Sep 2009 16:15:40 +0200
+
+coinor-osi (0.100.0-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #510148)
+
+ -- Aramian Wasielak <aramian.wasielak@gmail.com>  Sun, 19 Apr 2009 08:08:24 +0200

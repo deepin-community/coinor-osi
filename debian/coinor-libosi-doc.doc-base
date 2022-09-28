@@ -1,0 +1,9 @@
+Document: osi
+Title: osi API documentation
+Author: COIN-OR project
+Abstract: Doxygen-generated API documentation for coinor-osi.
+Section: Science/Mathematics
+
+Format: HTML
+Index: /usr/share/doc/coinor-libosi-doc/html/index.html
+Files: /usr/share/doc/coinor-libosi-doc/html/*.html
